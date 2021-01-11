@@ -1,3 +1,4 @@
+import { OrderSummaryService } from './services/orders/order-summary.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -14,6 +15,7 @@ import { AccountService } from './services/accounts/account.service';
 import { MenuService } from './services/menu/menu.service';
 import { TemplateService } from './services/template-logic/template.service';
 import { CartService } from './services/cart/cart.service';
+import { ProductsService } from './services/products/products.service';
 
 /* Pipes */
 
@@ -106,7 +108,7 @@ import { TemplatesComponent } from './views/templates/templates.component';
   ],
   providers: [CartService, TemplateService, MenuService, AccountService, OrdersService, QuotesService,
     SearchService, SuggestiveSellingService, TemplateService,
-    UserInfoService],
+    UserInfoService, ProductsService, OrderSummaryService],
   bootstrap: [AppComponent],
   exports: [CommonModule]
 })
