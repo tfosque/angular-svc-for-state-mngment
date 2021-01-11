@@ -6,7 +6,7 @@
   </button>
   <div *ngIf="(isLoggedIn | async) === false; else userLoggedIn" class="collapse navbar-collapse"
     id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav">
       <li class="nav-item" [ngClass]="{'active': (activeMenu | async) === 'Home'}">
         <a class="nav-link" routerLink="/">Beacon<span class="sr-only">(current)</span></a>
       </li>
@@ -49,18 +49,5 @@
       </ul>
     </div>
   </ng-template>
-  <!-- Login Buttons -->
-  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['login']" aria-disabled="true">Login <i class="fa fa-sign-in-alt"></i></a>
-      </li>
-    </ul>
-    <ul class="navbar-nav float-right">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['proplus']" aria-disabled="true">Logout <i
-            class="fa fa-sign-out-alt"></i></a>
-      </li>
-    </ul>
-  </div>
+
 </nav>
