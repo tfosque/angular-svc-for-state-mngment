@@ -15,7 +15,9 @@ export class MainMenuComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.userAccountService.getUserAccount();
+    this.userAccountService.
+      /* TODO Should the Menu detect initial credentials */
+      getUserAccount();
     this.userAccountService.userAccount$.subscribe(user => {
       this.user.next(user.slice(0, 1));
     });

@@ -4,34 +4,62 @@
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div *ngIf="(isLoggedIn | async) === false; else userLoggedIn" class="collapse navbar-collapse"
+    id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item" [ngClass]="{'active': (activeMenu | async) === 'Home'}">
         <a class="nav-link" routerLink="/">Beacon<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="cart" [ngClass]="{'active': (activeMenu | async) === 'Cart'}">Cart <i
-            class="fa fa-shopping-cart"></i></a>
+        <a class="nav-link" [routerLink]="['accounts/store/', (accountId | async)]" tabindex="-1" aria-disabled="true"
+          [ngClass]="{'active': (activeMenu | async) === 'Store'}">Store</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" [ngClass]="{'active': (activeMenu | async) === 'Templates'}">
-          Templates
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <!-- <a class="dropdown-item" routerLink="templates">Item</a> -->
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLink="templates">Create Template</a>
-        </div>
-      </li>
-      <!--   <li class="nav-item">
+    </ul>
+  </div>
+  <!-- IsLoggedIn Proplus Menus -->
+  <ng-template #userLoggedIn>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{'active': (activeMenu | async) === 'Home'}">
+          <a class="nav-link" routerLink="/">Beacon<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="cart" [ngClass]="{'active': (activeMenu | async) === 'Cart'}">Cart <i
+              class="fa fa-shopping-cart"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" [ngClass]="{'active': (activeMenu | async) === 'Templates'}">
+            Templates
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- <a class="dropdown-item" routerLink="templates">Item</a> -->
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="templates">Create Template</a>
+          </div>
+        </li>
+        <!--   <li class="nav-item">
         <a class="nav-link" routerLink="products" tabindex="-1" aria-disabled="true"
           [ngClass]="{'active': (activeMenu | async) === 'Products'}">Products</a>
       </li> -->
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['accounts/store/', (accountId | async)]" tabindex="-1" aria-disabled="true"
+            [ngClass]="{'active': (activeMenu | async) === 'Store'}">Store</a>
+        </li>
+      </ul>
+    </div>
+  </ng-template>
+  <!-- Login Buttons -->
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="['accounts/store/', (accountId | async)]" tabindex="-1" aria-disabled="true"
-          [ngClass]="{'active': (activeMenu | async) === 'Store'}">Store</a>
+        <a class="nav-link" [routerLink]="['login']" aria-disabled="true">Login <i class="fa fa-sign-in-alt"></i></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav float-right">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['proplus']" aria-disabled="true">Logout <i
+            class="fa fa-sign-out-alt"></i></a>
       </li>
     </ul>
   </div>

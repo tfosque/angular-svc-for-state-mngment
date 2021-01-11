@@ -12,6 +12,8 @@ export class UserAccount {
   cart?: Product[];
   orders?: Order[];
   quotes?: Quote[];
+  password?: string;
+  username?: string;
 }
 
 export interface AccountAddress {
