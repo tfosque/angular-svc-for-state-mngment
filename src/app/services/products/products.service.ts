@@ -48,10 +48,10 @@ export class ProductsService {
         })
       ) */
     //#endregion
-    this.http.get<Product[]>('http://localhost:3000/api/productsASMs')
+    this.http.get<Product[]>('http://localhost:3000/products')
       .subscribe(res => {
         const uniqProducts = uniqBy(res, 'itemOrProductDescription');
-        console.log('uniqProducts:', uniqProducts);
+        // console.log('uniqProducts:', uniqProducts);
         this.products.next(uniqProducts);
         this.updateProductCnt();
       });

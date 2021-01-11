@@ -1,3 +1,4 @@
+import { UserAccountService } from './../../services/user/user-account.service';
 import { BehaviorSubject } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
@@ -14,12 +15,19 @@ export class TemplatesComponent implements OnInit {
   products = new BehaviorSubject<Product[]>([]);
   constructor(
     private readonly menuService: MenuService,
-    private readonly productService: ProductsService
+    private readonly productService: ProductsService,
+    private readonly userAccountService: UserAccountService
   ) { }
 
   ngOnInit(): void {
     this.menuService.setActiveMenu('Templates');
     /* grab templates if any*/
+    this.userAccountService.getUserAccount()
+      .subscribe(res => console.log({ res }))
+  }
+
+  createTemplate() {
+    console.log(this.templateName)
   }
 
 }

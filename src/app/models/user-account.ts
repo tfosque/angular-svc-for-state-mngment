@@ -3,7 +3,7 @@ import { Product } from './product';
 import { Order } from './order';
 import { Quote } from './quote';
 export class UserAccount {
-  accountId?: any;
+  accountId?: string;
   fname?: string;
   lname?: string;
   email?: string;
@@ -20,7 +20,7 @@ export interface AccountAddress {
 }
 
 export interface Address {
-  accountId?: any;
+  accountId?: string;
   street?: string;
   city?: string;
   postal?: number;

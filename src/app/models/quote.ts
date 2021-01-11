@@ -1,3 +1,6 @@
 export class Quote {
-  id?: any;
+  quoteId?: string;
+  quoteName?: string;
+  createdate?: Date;
+  accountId?: string;
 }

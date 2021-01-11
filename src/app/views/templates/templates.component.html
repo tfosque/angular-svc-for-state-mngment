@@ -3,9 +3,11 @@
 </div>
 <div class="col offset-1">
   <div class="row" *ngIf="!accountHasTemplates; else templates">
-    <div class="col-2-shrink" style="margin-left: 15px"><button class="btn btn-primary">Create</button></div>
+    <div class="col-2-shrink" style="margin-left: 15px"><button (click)="createTemplate()"
+        class="btn btn-primary">Create</button></div>
     <div class="col-3"><input class="form-control" type="text" name="templateName" [(ngModel)]="templateName"
-        placeholder="Template name" /></div>
+        placeholder="Template name" />
+    </div>
   </div>
   <ng-template #templates>
     <div class="row">

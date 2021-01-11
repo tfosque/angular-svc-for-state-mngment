@@ -1,0 +1,28 @@
+.background-img {
+  background-image: url('../../../assets/images/login-screen-img.jpg');
+  background-size: 100%;
+  width: 2000px;
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-position: cover;
+  position: absolute;
+  z-index: -100;
+  left: 0;
+  top: 0;
+  // opacity: 0.5;
+}
+
+.form-container {
+  background: white;
+  // padding: 15px;
+  border-radius: 4px;
+  height: 45vh;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border: solid thin #e7e7e7;
+}
+
+.boxShadow {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}

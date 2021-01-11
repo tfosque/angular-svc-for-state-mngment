@@ -1,4 +1,9 @@
-<div class="col">
-  <p>store works!</p>
-
+<div class="col-10 offset-1">
+  <h5 class="section-title">Store</h5>
+  <div class="text-center" *ngIf="(products$ | async)?.length < 0">
+    <app-spinner></app-spinner>
+  </div>
+  <ng-template #products>
+    <div>Products</div>
+  </ng-template>
 </div>

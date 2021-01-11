@@ -31,7 +31,6 @@ import { OrdersComponent } from './views/orders/orders.component';
 import { QuotesComponent } from './views/quotes/quotes.component';
 import { AddressBookComponent } from './views/address-book/address-book.component';
 import { AccountsComponent } from './views/accounts/accounts.component';
-import { DelivertTrackingComponent } from './views/delivert-tracking/delivert-tracking.component';
 import { LogoutComponent } from './views/logout/logout.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import { ChangePasswordComponent } from './views/change-password/change-password.component';
@@ -65,6 +64,8 @@ import { PageNotFoundComponent } from './views/page-not-found/page-not-found.com
 import { PageContentComponent } from './views/layouts/page-content/page-content.component';
 import { LayoutsComponent } from './views/layouts/layouts.component';
 import { UserAccountService } from './services/user/user-account.service';
+import { DeliveryTrackingComponent } from './views/delivery-tracking/delivery-tracking.component';
+import { SpinnerComponent } from './_shared-components/spinner/spinner.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +78,6 @@ import { UserAccountService } from './services/user/user-account.service';
     QuotesComponent,
     AddressBookComponent,
     AccountsComponent,
-    DelivertTrackingComponent,
     LogoutComponent,
     ProfileComponent,
     ChangePasswordComponent,
@@ -106,7 +106,9 @@ import { UserAccountService } from './services/user/user-account.service';
     CreateTemplateComponent,
     PageNotFoundComponent,
     PageContentComponent,
-    LayoutsComponent
+    LayoutsComponent,
+    DeliveryTrackingComponent,
+    SpinnerComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

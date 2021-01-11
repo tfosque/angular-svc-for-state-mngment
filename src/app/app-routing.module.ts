@@ -18,16 +18,18 @@ import { StoreComponent } from './views/store/store.component';
 
 const routes: Routes = [
   // secure
+  { path: 'login', component: LoginComponent },
   { path: 'proplus', component: AdvertisingComponent },
+  /* accounts */
   { path: 'accounts/:accountId', component: AdvertisingComponent },
   { path: 'accounts/:accountId/templates/:templateId', component: TemplatesComponent },
   { path: 'accounts/:accountId/orders/:orderId', component: OrdersComponent },
+  { path: 'accounts/store/:accountId', component: StoreComponent },
   //  unsecure
   { path: 'cart', component: CartComponent },
   { path: 'templates', component: TemplatesComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'products/:id', component: ProductComponent },
-  { path: 'login', component: LoginComponent },
   { path: 'address-book', component: AddressBookComponent },
   { path: 'orders', component: OrdersComponent },
   { path: 'pefect-order', component: PerfectOrderComponent },
@@ -36,7 +38,7 @@ const routes: Routes = [
   { path: 'quotes', component: QuotesComponent },
   { path: 'templates', component: TemplatesComponent },
   { path: 'store', component: StoreComponent },
-  { path: '', redirectTo: '/proplus', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // redirect to `first-component`
   { path: '**', component: PageNotFoundComponent }  // Wildcard route for a 404 page
 ];
 
