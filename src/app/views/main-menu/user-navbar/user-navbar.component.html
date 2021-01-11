@@ -14,21 +14,24 @@
         <a class="nav-link" routerLink="cart" [ngClass]="{'active': (activeMenu | async) === 'Cart'}">Cart <i
             class="fa fa-shopping-cart"></i></a>
       </li>
-      <li class="nav-item dropdown" [ngClass]="{'active': (activeMenu | async) === 'Templates'}">
-        <a class="nav-link dropdown-toggle" routerLink="templates" id="navbarDropdown" role="button"
-          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" [ngClass]="{'active': (activeMenu | async) === 'Templates'}">
           Templates
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Shingles</a>
-          <a class="dropdown-item" href="#">Dry Panel</a>
+          <a class="dropdown-item" routerLink="templates">Item</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Create Template</a>
         </div>
       </li>
-      <li class="nav-item">
+      <!--   <li class="nav-item">
         <a class="nav-link" routerLink="products" tabindex="-1" aria-disabled="true"
           [ngClass]="{'active': (activeMenu | async) === 'Products'}">Products</a>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="store" tabindex="-1" aria-disabled="true"
+          [ngClass]="{'active': (activeMenu | async) === 'Store'}">Store</a>
       </li>
     </ul>
   </div>

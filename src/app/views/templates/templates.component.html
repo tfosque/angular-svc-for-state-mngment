@@ -1,1 +1,12 @@
-<p>templates works!</p>
+<div class="col mb-5">
+  <h5 class="section-title">Templates</h5>
+</div>
+<div class="col">
+  <div class="row" *ngIf="!accountHasTemplates; else templates">
+    <div class="col-2-shrink" style="margin-left: 15px"><button class="btn btn-primary">Create Template</button></div>
+    <div class="col-3"><input class="form-control" type="text" name="templateName" [(ngModel)]="templateName" /></div>
+  </div>
+  <ng-template #templates>
+
+  </ng-template>
+</div>

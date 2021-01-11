@@ -31,6 +31,7 @@ export class ProductsService {
 
   /* Class Methods */
   getProducts(): void {
+    //#region 
     /* fetch('http://localhost:3000/api/productsASMs')
       .then(res => res.json()
         .then(results => {
@@ -46,14 +47,14 @@ export class ProductsService {
           console.log({ err });
         })
       ) */
+    //#endregion
     this.http.get<Product[]>('http://localhost:3000/api/productsASMs')
       .subscribe(res => {
         const uniqProducts = uniqBy(res, 'itemOrProductDescription');
         console.log('uniqProducts:', uniqProducts);
         this.products.next(uniqProducts);
         this.updateProductCnt();
-      })
-    // return this.products$;
+      });
   }
   getProduct(id: any) {
     console.log({ id });

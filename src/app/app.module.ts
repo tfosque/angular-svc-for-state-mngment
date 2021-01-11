@@ -59,7 +59,11 @@ import { SearchService } from './services/search/search.service';
 import { CommonModule } from '@angular/common';
 import { NotificationsComponent } from './views/notifications/notifications.component';
 import { TemplatesComponent } from './views/templates/templates.component';
-
+import { StoreComponent } from './views/store/store.component';
+import { CreateTemplateComponent } from './views/templates/create-template/create-template.component';
+import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
+import { PageContentComponent } from './views/page-content/page-content.component';
+import { LayoutsComponent } from './views/layouts/layouts.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,7 +100,12 @@ import { TemplatesComponent } from './views/templates/templates.component';
     ProductComponent,
     ProductsComponent,
     NotificationsComponent,
-    TemplatesComponent
+    TemplatesComponent,
+    StoreComponent,
+    CreateTemplateComponent,
+    PageNotFoundComponent,
+    PageContentComponent,
+    LayoutsComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
