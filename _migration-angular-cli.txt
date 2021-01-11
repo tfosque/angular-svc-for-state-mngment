@@ -1,0 +1,153 @@
+y metadata from registry...
+                  Package "codelyzer" has an incompatible peer dependency to "@angular/compiler" (requires ">=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0" (extended), would install "11.0.7").
+                  Package "codelyzer" has an incompatible peer dependency to "@angular/core" (requires ">=2.3.1 <10.0.0 || >9.0.0-beta <10.0.0 || >9.1.0-beta <10.0.0 || >9.2.0-beta <10.0.0" (extended), would install "11.0.7").
+    Updating package.json with dependency @angular-devkit/build-angular @ "0.1100.6" (was "0.901.13")...
+    Updating package.json with dependency @angular/cli @ "11.0.6" (was "9.1.13")...
+    Updating package.json with dependency @angular/compiler-cli @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/language-service @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency karma @ "5.1.1" (was "4.4.1")...
+    Updating package.json with dependency protractor @ "7.0.0" (was "5.4.4")...
+    Updating package.json with dependency typescript @ "4.0.5" (was "3.8.3")...
+    Updating package.json with dependency @angular/animations @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/common @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/compiler @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/core @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/forms @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/platform-browser @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/platform-browser-dynamic @ "11.0.7" (was "9.1.13")...
+    Updating package.json with dependency @angular/router @ "11.0.7" (was "9.1.13")...
+  UPDATE package.json (1352 bytes)
+✔ Packages installed successfully.
+** Executing migrations of package '@angular/cli' **
+
+❯ Update Browserslist configuration file name to '.browserslistrc' from deprecated 'browserslist'.
+  RENAME browserslist => .browserslistrc
+  Migration completed.
+
+❯ Update tslint to version 6 and adjust rules to maintain existing behavior.
+  Migration completed.
+
+❯ Remove deprecated 'es5BrowserSupport' browser builder option.
+  The inclusion for ES5 polyfills will be determined from the browsers listed in the browserslist configuration.
+  Migration completed.
+
+❯ Replace deprecated and removed 'styleext' and 'spec' Angular schematic options with 'style' and 'skipTests', respectively.
+  Migration completed.
+
+❯ Remove deprecated options from 'angular.json' that are no longer present in v10.
+  Migration completed.
+
+❯ Add the tslint deprecation rule to tslint JSON configuration files.
+  Migration completed.
+
+❯ Update library projects to use tslib version 2 as a direct dependency.
+  Read more about this here: https://v10.angular.io/guide/migration-update-libraries-tslib
+  Migration completed.
+
+❯ Update workspace dependencies to match a new v10 project.
+  UPDATE package.json (1352 bytes)
+✔ Packages installed successfully.
+  Migration completed.
+
+❯ Update 'module' and 'target' TypeScript compiler options.
+  Read more about this here: https://v10.angular.io/guide/migration-update-module-and-target-compiler-options
+  UPDATE tsconfig.json (489 bytes)
+  UPDATE e2e/tsconfig.json (217 bytes)
+  Migration completed.
+
+❯ Removing "Solution Style" TypeScript configuration file support.
+    Migration has already been executed.
+  Migration completed.
+
+❯ Replace deprecated library builder '@angular-devkit/build-ng-packagr'.
+  Migration completed.
+
+❯ Add 'declarationMap' compiler options for non production library builds.
+  Migration completed.
+
+❯ Remove deprecated options from 'angular.json' that are no longer present in v11.
+  UPDATE angular.json (3740 bytes)
+  Migration completed.
+
+❯ Update workspace dependencies to match a new v11 project.
+  UPDATE package.json (1352 bytes)
+✔ Packages installed successfully.
+  Migration completed.
+
+** Executing migrations of package '@angular/core' **
+
+❯ Missing @Injectable and incomplete provider definition migration.
+  As of Angular 9, enforcement of @Injectable decorators for DI is a bit stricter and incomplete provider definitions behave differently.
+  Read more about this here: https://v9.angular.io/guide/migration-injectable
+  Migration completed.
+
+❯ ModuleWithProviders migration.
+  As of Angular 10, the ModuleWithProviders type requires a generic.
+  This migration adds the generic where it is missing.
+  Read more about this here: https://v10.angular.io/guide/migration-module-with-providers
+  Migration completed.
+
+❯ Undecorated classes with Angular features migration.
+  In version 10, classes that use Angular features and do not have an Angular decorator are no longer supported.
+  Read more about this here: https://v10.angular.io/guide/migration-undecorated-classes
+  Migration completed.
+
+❯ In Angular version 11, the type of `AbstractControl.parent` can be `null` to reflect the runtime value more accurately.
+  This migration automatically adds non-null assertions to existing accesses of the `parent` property on types like `FormControl`, `FormArray` and `FormGroup`.
+  Migration completed.
+
+❯ ViewEncapsulation.Native has been removed as of Angular version 11.
+  This migration replaces any usages with ViewEncapsulation.ShadowDom.
+  Migration completed.
+
+❯ NavigationExtras omissions migration.
+  In version 11, some unsupported properties were omitted from the `extras` parameter of the `Router.navigateByUrl` and `Router.createUrlTree` methods.
+  Migration completed.
+
+❯ Updates the `initialNavigation` property for `RouterModule.forRoot`.
+  Migration completed.
+
+❯ NavigationExtras.preserveQueryParams has been removed as of Angular version 11.
+   This migration replaces any usages with the appropriate assignment of the queryParamsHandling key.
+  Migration completed.
+
+❯ The default value for `relativeLinkResolution` is changing from 'legacy' to 'corrected'.
+This migration updates `RouterModule` configurations that use the default value to 
+now specifically use 'legacy' to prevent breakages when updating.
+  UPDATE src/app/app-routing.module.ts (284 bytes)
+  Migration completed.
+
+❯ `async` to `waitForAsync` migration.
+  The `async` testing function has been renamed to `waitForAsync` to avoid confusion with the native `async` keyword.
+  UPDATE src/app/app.component.spec.ts (1118 bytes)
+  UPDATE src/app/services/search/search/search.component.spec.ts (642 bytes)
+  UPDATE src/app/views/accounts/accounts.component.spec.ts (656 bytes)
+  UPDATE src/app/views/address-book/address-book.component.spec.ts (678 bytes)
+  UPDATE src/app/views/advertising/advertising.component.spec.ts (677 bytes)
+  UPDATE src/app/views/advertising/becn-blog/becn-blog.component.spec.ts (657 bytes)
+  UPDATE src/app/views/advertising/becn-landing-page/becn-landing-page.component.spec.ts (707 bytes)
+  UPDATE src/app/views/cart/cart.component.spec.ts (628 bytes)
+  UPDATE src/app/views/cart/cart-item/cart-item.component.spec.ts (657 bytes)
+  UPDATE src/app/views/change-password/change-password.component.spec.ts (699 bytes)
+  UPDATE src/app/views/delivert-tracking/delivert-tracking.component.spec.ts (713 bytes)
+  UPDATE src/app/views/login/login.component.spec.ts (635 bytes)
+  UPDATE src/app/views/login/form/form.component.spec.ts (628 bytes)
+  UPDATE src/app/views/login/login-form/login-form.component.spec.ts (664 bytes)
+  UPDATE src/app/views/logout/logout.component.spec.ts (642 bytes)
+  UPDATE src/app/views/main-menu/main-menu.component.spec.ts (657 bytes)
+  UPDATE src/app/views/main-menu/tools-navbar/tools-navbar.component.spec.ts (678 bytes)
+  UPDATE src/app/views/main-menu/user-navbar/user-navbar.component.spec.ts (671 bytes)
+  UPDATE src/app/views/modals/modals.component.spec.ts (642 bytes)
+  UPDATE src/app/views/modals/modal/modal.component.spec.ts (635 bytes)
+  UPDATE src/app/views/my-branch/my-branch.component.spec.ts (657 bytes)
+  UPDATE src/app/views/orders/orders.component.spec.ts (642 bytes)
+  UPDATE src/app/views/perfect-order/perfect-order.component.spec.ts (685 bytes)
+  UPDATE src/app/views/profile/profile.component.spec.ts (649 bytes)
+  UPDATE src/app/views/promotin-tracker/promotin-tracker.component.spec.ts (706 bytes)
+  UPDATE src/app/views/quotes/quotes.component.spec.ts (642 bytes)
+  UPDATE src/app/views/search-global/search-global.component.spec.ts (685 bytes)
+  UPDATE src/app/views/side-nav-bar/side-nav-bar.component.spec.ts (672 bytes)
+  UPDATE src/app/views/suggestive-selling/suggestive-selling.component.spec.ts (720 bytes)
+  UPDATE src/app/views/template-items/template-items.component.spec.ts (692 bytes)
+  UPDATE src/app/views/template-items/template-row-item/template-row-item.component.spec.ts (707 bytes)
+  Migration completed.
