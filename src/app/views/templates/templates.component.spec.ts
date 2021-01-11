@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BasicListItemComponent } from './basic-list-item.component';
+import { TemplatesComponent } from './templates.component';
 
-describe('BasicListItemComponent', () => {
-  let component: BasicListItemComponent;
-  let fixture: ComponentFixture<BasicListItemComponent>;
+describe('TemplatesComponent', () => {
+  let component: TemplatesComponent;
+  let fixture: ComponentFixture<TemplatesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BasicListItemComponent ]
+      declarations: [ TemplatesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BasicListItemComponent);
+    fixture = TestBed.createComponent(TemplatesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -35,7 +35,7 @@ import { ProfileComponent } from './views/profile/profile.component';
 import { ChangePasswordComponent } from './views/change-password/change-password.component';
 import { ModalsComponent } from './views/modals/modals.component';
 import { MyBranchComponent } from './views/my-branch/my-branch.component';
-import { PromotinTrackerComponent } from './views/promotin-tracker/promotin-tracker.component';
+import { PromotionTrackerComponent } from './views/promotion-tracker/promotion-tracker.component';
 import { PerfectOrderComponent } from './views/perfect-order/perfect-order.component';
 import { SuggestiveSellingComponent } from './views/suggestive-selling/suggestive-selling.component';
 import { AdvertisingComponent } from './views/advertising/advertising.component';
@@ -47,15 +47,16 @@ import { FormComponent } from './views/login/form/form.component';
 import { LoginFormComponent } from './views/login/login-form/login-form.component';
 import { UserNavbarComponent } from './views/main-menu/user-navbar/user-navbar.component';
 import { ToolsNavbarComponent } from './views/main-menu/tools-navbar/tools-navbar.component';
-import { TemplateRowItemComponent } from './views/template-items/template-row-item/template-row-item.component';
+import { TemplateRowItemComponent } from './views/templates/template-items/template-row-item/template-row-item.component';
 import { ModalComponent } from './views/modals/modal/modal.component';
-import { TemplateItemsComponent } from './views/template-items/template-items.component';
+import { TemplateItemsComponent } from './views/templates/template-items/template-items.component';
 import { ProductComponent } from './views/products/product/product.component';
 import { ProductsComponent } from './views/products/products.component';
 import { SuggestiveSellingService } from './services/suggestive-selling/suggestive-selling.service';
 import { SearchService } from './services/search/search.service';
 import { CommonModule } from '@angular/common';
 import { NotificationsComponent } from './views/notifications/notifications.component';
+import { TemplatesComponent } from './views/templates/templates.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,7 @@ import { NotificationsComponent } from './views/notifications/notifications.comp
     ChangePasswordComponent,
     ModalsComponent,
     MyBranchComponent,
-    PromotinTrackerComponent,
+    PromotionTrackerComponent,
     PerfectOrderComponent,
     SuggestiveSellingComponent,
     AdvertisingComponent,
@@ -92,7 +93,8 @@ import { NotificationsComponent } from './views/notifications/notifications.comp
     TemplateItemsComponent,
     ProductComponent,
     ProductsComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    TemplatesComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
