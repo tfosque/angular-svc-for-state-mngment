@@ -62,8 +62,9 @@ import { TemplatesComponent } from './views/templates/templates.component';
 import { StoreComponent } from './views/store/store.component';
 import { CreateTemplateComponent } from './views/templates/create-template/create-template.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
-import { PageContentComponent } from './views/page-content/page-content.component';
+import { PageContentComponent } from './views/layouts/page-content/page-content.component';
 import { LayoutsComponent } from './views/layouts/layouts.component';
+import { UserAccountService } from './services/user/user-account.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -115,9 +116,21 @@ import { LayoutsComponent } from './views/layouts/layouts.component';
     FormsModule,
     Bootstrap4Module
   ],
-  providers: [CartService, TemplateService, MenuService, AccountService, OrdersService, QuotesService,
-    SearchService, SuggestiveSellingService, TemplateService,
-    UserInfoService, ProductsService, OrderSummaryService],
+  providers: [
+    CartService,
+    TemplateService,
+    MenuService,
+    AccountService,
+    OrdersService,
+    QuotesService,
+    SearchService,
+    SuggestiveSellingService,
+    TemplateService,
+    UserInfoService,
+    ProductsService,
+    OrderSummaryService,
+    UserAccountService
+  ],
   bootstrap: [AppComponent],
   exports: [CommonModule]
 })

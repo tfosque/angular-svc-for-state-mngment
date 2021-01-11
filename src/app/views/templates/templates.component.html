@@ -1,12 +1,17 @@
-<div class="col mb-5">
+<div class="col-10 offset-1 mb-5">
   <h5 class="section-title">Templates</h5>
 </div>
-<div class="col">
+<div class="col offset-1">
   <div class="row" *ngIf="!accountHasTemplates; else templates">
-    <div class="col-2-shrink" style="margin-left: 15px"><button class="btn btn-primary">Create Template</button></div>
-    <div class="col-3"><input class="form-control" type="text" name="templateName" [(ngModel)]="templateName" /></div>
+    <div class="col-2-shrink" style="margin-left: 15px"><button class="btn btn-primary">Create</button></div>
+    <div class="col-3"><input class="form-control" type="text" name="templateName" [(ngModel)]="templateName"
+        placeholder="Template name" /></div>
   </div>
   <ng-template #templates>
-
+    <div class="row">
+      <div class="col">
+        <app-template-items></app-template-items>
+      </div>
+    </div>
   </ng-template>
 </div>
